@@ -1,0 +1,7 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: {{ include "kargo-boilerplate.name" . }}
+  namespace: {{ include "kargo-boilerplate.name" . }}
+spec:
+  subscriptions: {{ toYaml .Values.warehouse.subscriptions | nindent 4 }}

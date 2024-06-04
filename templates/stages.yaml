@@ -1,0 +1,12 @@
+{{- range .Values.stages }}
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: {{ .name }}
+  namespace: {{ include "kargo-boilerplate.name" $ }}
+  annotations: {{ toYaml .annotations | nindent 4 }}
+spec:
+  subscriptions: {{ toYaml .subscriptions | nindent 4 }}
+  promotionMechanisms: {{ toYaml .promotionMechanisms | nindent 4 }}
+---
+{{- end }}

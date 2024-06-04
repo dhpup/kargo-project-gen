@@ -1,0 +1,9 @@
+# Default values for kargo-boilerplate.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+project:
+  promotionPolicies: []
+warehouse:
+  subscriptions: []
+stages: []

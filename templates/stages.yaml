@@ -3,7 +3,7 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: {{ .name }}
-  namespace: {{ include "kargo-boilerplate.name" $ }}
+  namespace: {{ include "kargo-project-gen.name" $ }}
   annotations: {{ toYaml .annotations | nindent 4 }}
 spec:
   subscriptions: {{ toYaml .subscriptions | nindent 4 }}
